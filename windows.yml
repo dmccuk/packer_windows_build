@@ -1,0 +1,53 @@
+---
+- name: Manage windows servers
+  hosts: win
+  tasks:
+
+  - name: Create directory structure
+    win_file:
+      path: C:\Temp\folder
+      state: directory
+
+  - name: Touch a file (creates if not present, updates modification time if present)
+    win_file:
+      path: C:\Temp\folder\foo.txt
+      state: touch
+
+  - name: Create a file from a Jinja2 template
+    win_template:
+      src: foo.txt.j2
+      dest: C:\temp\folder\foo.txt
+
+  - win_stat:
+      path: C:\temp\folder\foo.txt
+      get_checksum: yes
+      checksum_algorithm: md5
+    register: md5_checksum
+
+  - debug:
+      var: md5_checksum.stat.checksum
+
+  - name: test powershell
+    win_shell: |
+              get-host
+    register: result_get_host
+
+  - name: display result_get_host
+    debug:
+      var: result_get_host
+
+  - name: add directory
+    win_file:
+      path: C:\ansible_examples
+      state: directory
+
+  - name: Download the Apache installer
+    win_get_url:
+      url: https://archive.apache.org/dist/httpd/binaries/win32/httpd-2.2.25-win32-x86-no_ssl.msi
+      dest: C:\ansible_examples\httpd-2.2.25-win32-x86-no_ssl.msi
+      force: true
+
+  - name: Install MSI
+    win_package:
+      path: C:\ansible_examples\httpd-2.2.25-win32-x86-no_ssl.msi
+      state: present
