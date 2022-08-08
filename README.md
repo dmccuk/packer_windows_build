@@ -21,7 +21,7 @@ Don’t worry if you don’t know how to do these steps. You can follow my previ
 
 
 ### The demo
-Now I’ll show you how to do it. A quick note here, I make these video’s for you. I hope they help with your learning so feel free to share any of them with your colleagues, on LinkedIn and other social media platforms. Subscribe so you see new content I post and like the video.
+Now I’ll show you how to do it. A quick note. **I make these video’s for you. I hope they help with your learning so feel free to share any of them with your colleagues, on LinkedIn and other social media platforms. I'd really appreciate it if you could Subscribe so you see new content I post and please, like the video**.
 
 If you have question, pop them in the comments and I’ll reply as soon as I can. Now, lets get down to it.
 
@@ -96,7 +96,7 @@ Check my video for the output.
 You just used packer to create a custom windows 2019 server. Try the following:
 
   * Install openssh in the bootstrap_win.txt
-  * Update the variables in the hosts.ini file with the SSH ones.
+  * Update the variables in the hosts.ini file with the SSH ones - [checkout my demo in that here](https://youtu.be/RESB6ksAlj0)
   * Add additional things to install either in Ansible or in the bootstrap_win.txt file.
 
 Let me know how you get on in the comments!
