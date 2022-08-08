@@ -1,6 +1,6 @@
 ## Custom Windows 2019 AMI using Packer
 
-  * Then we'll use ANsible to configure your new Windows 2019 server!
+  * I'll also show you how to use Ansible to configure your new Windows 2019 server!
   
 I’m going to follow the steps from the hashicorp website and create a customised Windows 2019 server and setup winrm, and set the Administrator password.
 
