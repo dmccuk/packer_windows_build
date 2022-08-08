@@ -81,6 +81,10 @@ I'm not doing anything amazing here. I'm just creating an EC2 image from the AMI
 I've provided the Ansible code that is ready to go for this demo. We're using winrm over HTTP. This is obviously not entrypted and **not recommended for production**. I'm just using it for the demo. You can change the script to do whatever you need, including changing the configuration to HTTPS or even SSH (I have demo's on this. Comment in the YouTube video if you need a hand).
 
 Now lets test our Ansible connectivity with win_ping
+
+  * Update the hosts.ini file with your windows server IP or Public name. I'm using the IP address.
+  * Open the winrm HTTP port into the incoming rules (watch the video).
+  
 ```
 ansible win -i hosts.ini -m win_ping
 ```
@@ -94,8 +98,12 @@ ansible-playbook -i hosts.ini windows.yml
 ```
 Check my video for the output.
 
+In my video, I'll login to the Windows 2019 server and we can have a look around and see everything that Ansible did.
+
 ### That's it
-You just used packer to create a custom windows 2019 server. Try the following:
+You just used packer to create a custom windows 2019 server and you've configured it with Ansible. Good Job!
+
+Now maybe try some of the following?:
 
   * Install openssh in the bootstrap_win.txt
   * Update the variables in the hosts.ini file with the SSH ones - [checkout my demo in that here](https://youtu.be/RESB6ksAlj0)
