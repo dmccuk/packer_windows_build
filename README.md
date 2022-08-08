@@ -21,7 +21,9 @@ Don’t worry if you don’t know how to do these steps. You can follow my previ
 
 
 ### The demo
-Now I’ll show you how to do it. A quick note. **I make these video’s for you. I hope they help with your learning so feel free to share any of them with your colleagues, on LinkedIn and other social media platforms. I'd really appreciate it if you could Subscribe so you see new content I post and please, like the video**.
+Now I’ll show you how to do it. A quick note.
+
+***"I make these video’s for you. I hope they help with your learning so feel free to share any of them with your colleagues, on LinkedIn and other social media platforms. I'd really appreciate it if you could Subscribe so you see new content I post and please, like the video"***.
 
 If you have question, pop them in the comments and I’ll reply as soon as I can. Now, lets get down to it.
 
