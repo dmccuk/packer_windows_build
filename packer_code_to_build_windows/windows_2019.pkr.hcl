@@ -9,7 +9,7 @@ packer {
 
 variable "region" {
   type    = string
-  default = "eu-west-2"
+  default = "eu-central-1"
 }
 
 locals { timestamp = regex_replace(timestamp(), "[- TZ:]", "") }
@@ -17,7 +17,7 @@ locals { timestamp = regex_replace(timestamp(), "[- TZ:]", "") }
 # source blocks are generated from your builders; a source can be referenced in
 # build blocks. A build block runs provisioner and post-processors on a
 # source.
-source "amazon-ebs" "firstrun-windows" {
+source "amazon-ebs" "windows-packer" {
   ami_name      = "packer-windows-demo-${local.timestamp}"
   communicator  = "winrm"
   instance_type = "t2.micro"
@@ -38,8 +38,8 @@ source "amazon-ebs" "firstrun-windows" {
 
 # a build block invokes sources and runs provisioning steps on them.
 build {
-  name    = "learn-packer"
-  sources = ["source.amazon-ebs.firstrun-windows"]
+  name    = "windows-packer"
+  sources = ["source.amazon-ebs.windows-packer"]
 
   provisioner "powershell" {
     environment_vars = ["DEVOPS_LIFE_IMPROVER=PACKER"]
