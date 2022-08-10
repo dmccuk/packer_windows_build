@@ -33,7 +33,7 @@ If you have question, pop them in the comments and I’ll reply as soon as I can
   * Create the AMI image
   * Build a windows server from the new AMI
   * Login to test credentials
-  * Open the FW for winrm-HTTPS
+  * Open the FW for winrm-HTTP
   * Test with Ansible win_ping to confirm connectivity
   * Now run my test playbook
 
